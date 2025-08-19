@@ -1,0 +1,28 @@
+{
+  "name": "Smart Tab Manager",
+  "description": "Recommends closing unused tabs",
+  "version": "1.0.2",
+  "manifest_version": 3,
+
+  "permissions": ["tabs", "storage", "notifications", "scripting", "alarms"],
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [{
+    "resources": ["autopopup.html"],
+    "matches": ["<all_urls>"]
+  }], 
+  "content_scripts": [
+  {
+    "matches": ["http://*/*", "https://*/*"], 
+    "js": ["content.js"]
+  }
+]
+
+}
