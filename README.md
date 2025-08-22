@@ -1,4 +1,4 @@
-#Smart Tab manager
+# Smart Tab manager
 
 **Description:**
 
