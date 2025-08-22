@@ -93,14 +93,8 @@ const IDLE_DECAY_DELAY = 10;
 
 **Future scope:**
 
-Cross-browser support
+1. Cross-browser support: Extend the extension to work on browsers like Firefox, Edge, and Safari, not just Chrome.
 
-Extend the extension to work on browsers like Firefox, Edge, and Safari, not just Chrome.
+2. Machine Learning-based Recommendations: Currently, the tab score is calculated using simple heuristics (like thresholds for “keep”, “consider”, and “close”). A heap is used to efficiently track and sort tabs based on their scores, but it does not calculate the scores itself. Future versions could use ML models to predict tab importance based on more complex patterns of user behavior.
 
-Machine Learning-based Recommendations
-
-Currently, the tab score is calculated using simple heuristics. Future versions could use ML models to predict tab importance based on more complex patterns of user behavior.
-
-Synchronization Across Devices
-
-Sync tab activity and recommendations across multiple devices logged into the same account, so users can manage tabs on desktop and laptop simultaneously.
+3. Synchronization Across Devices: Sync tab activity and recommendations across multiple devices logged into the same account, so users can manage tabs on desktop and laptop simultaneously.
