@@ -11,11 +11,11 @@ function safeSendMessage(message, callback) {
     try {
         if (chrome?.runtime?.id) {
             chrome.runtime.sendMessage(message, callback || (() => {
-                void chrome.runtime?.lastError; // ✅ ignore errors
+                void chrome.runtime?.lastError; 
             }));
         }
     } catch {
-        // ✅ swallow "Extension context invalidated"
+
     }
 }
 
