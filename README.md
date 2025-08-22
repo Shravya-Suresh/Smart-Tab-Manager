@@ -83,11 +83,13 @@ Here’s the logic for deciding the tab status based on score:
 if (score >= 20) return "keep";       // <-- change this threshold
 if (score >= 10) return "consider";   // <-- change this threshold
 return "close";
+```
 
 To change the time the extension should wait for the score to reduce, search for the below line in background.js and madify the number, it is is seconds unit
 
 ```javascript
 const IDLE_DECAY_DELAY = 10;
+```
 
 **Future scope:**
 
