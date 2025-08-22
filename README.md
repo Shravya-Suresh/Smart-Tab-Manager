@@ -76,9 +76,12 @@ The Chrome extension can send POST requests to the backend with tab activity dat
 
 The backend can respond with tab recommendations or historical statistics via REST APIs.
 
-Example endpoints (backend):
+To chnage the score range of the three categories, search for the below line of code in and madify the numbers as per requirements
+Here’s the logic for deciding the tab status based on score:
 
-POST /api/tabActivity – send current tab activity data
+```javascript
+if (score >= 20) return "keep";       // <-- change this threshold
+if (score >= 10) return "consider";   // <-- change this threshold
+return "close";
 
-GET /api/recommendation/{tabId} – fetch recommendation for a specific tab
 
