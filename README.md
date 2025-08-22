@@ -1,6 +1,6 @@
-Smart Tab manager
+#Smart Tab manager
 
-Description:
+**Description:**
 
 As developers, we often keep many browser tabs open for references, documentation, or tools. Over time, this becomes overwhelming, and we may forget or feel lazy about closing tabs that are no longer needed.
 
@@ -8,7 +8,7 @@ Smart Tab Manager is a Google Chrome extension designed to help manage browser t
 
 The extension then recommends tabs to close by showing an intuitive popup, helping users keep their browser clean and focused, without losing important references. Tabs that have no activity (no scrolling, clicking, or typing) are considered less important and suggested for closure.
 
-Methodology
+**Methodology:**
 
 Smart Tab Manager is designed to intelligently manage browser tabs by monitoring user activity and recommending which tabs to keep or close. It consists of two main components: a backend and a Chrome extension.
 
@@ -76,7 +76,7 @@ The Chrome extension can send POST requests to the backend with tab activity dat
 
 The backend can respond with tab recommendations or historical statistics via REST APIs.
 
-To chnage the score range of the three categories, search for the below line of code in and madify the numbers as per requirements
+To change the score range of the three categories, search for the below line of code in background.js and madify the numbers as per requirements
 Here’s the logic for deciding the tab status based on score:
 
 ```javascript
@@ -84,4 +84,21 @@ if (score >= 20) return "keep";       // <-- change this threshold
 if (score >= 10) return "consider";   // <-- change this threshold
 return "close";
 
+To change the time the extension should wait for the score to reduce, search for the below line in background.js and madify the number, it is is seconds unit
 
+```javascript
+const IDLE_DECAY_DELAY = 10;
+
+**Future scope:**
+
+Cross-browser support
+
+Extend the extension to work on browsers like Firefox, Edge, and Safari, not just Chrome.
+
+Machine Learning-based Recommendations
+
+Currently, the tab score is calculated using simple heuristics. Future versions could use ML models to predict tab importance based on more complex patterns of user behavior.
+
+Synchronization Across Devices
+
+Sync tab activity and recommendations across multiple devices logged into the same account, so users can manage tabs on desktop and laptop simultaneously.
