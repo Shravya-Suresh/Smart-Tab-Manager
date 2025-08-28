@@ -99,6 +99,3 @@ const IDLE_DECAY_DELAY = 10;
 
 3. Synchronization Across Devices: Sync tab activity and recommendations across multiple devices logged into the same account, so users can manage tabs on desktop and laptop simultaneously.
 
-## 🎥 Demo
-
-▶ [Watch the Demo Video]()
