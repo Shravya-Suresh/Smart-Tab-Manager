@@ -52,23 +52,17 @@ Heap (Min-Heap): The backend or extension uses a min-heap to efficiently track t
 
 Scoring Algorithm:
 
-Active time × 0.5
+-Active time × 0.5
 
-Clicks × 0.3
+-Clicks × 0.3
 
-Key presses × 0.2
+-Key presses × 0.2
 
-Scroll depth × 0.1
+-Scroll depth × 0.1
 
-Idle time × -0.5
+-Idle time × -0.5
 
-Tabs are then classified as:
-
-Keep (high score)
-
-Consider (medium score)
-
-Close (low score)
+-Tabs are then classified as: Keep (high score), Consider (medium score),Close (low score)
 
 4. API Usage
 
